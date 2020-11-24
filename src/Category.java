@@ -1,8 +1,8 @@
 public enum  Category {
-    Tennis,
-    Basketball,
-    Football,
-    Badminton,
-    Baseball,
-    Swimming
+    TENNIS,
+    BASKETBALL,
+    FOOTBALL,
+    BADMINTON,
+    BASEBALL,
+    SWIMMING
 }
