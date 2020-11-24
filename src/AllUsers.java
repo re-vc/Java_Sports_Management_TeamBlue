@@ -1,7 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class DuplicateUsers {
+public class AllUsers  {
+
 
     public static HashMap<Integer, User> Display_AllUsers(){
         User user1 = new User("Robert","Smith","Robert@gmail.com");
@@ -36,8 +37,9 @@ public class DuplicateUsers {
         return allUsers;
     }
 
+    public static void CreateNewUser(){
 
-
+    }
 
 
 
