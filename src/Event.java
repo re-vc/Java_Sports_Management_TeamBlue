@@ -19,7 +19,7 @@ public class Event {
 
     private static int counter = 1;
 
-    //private ArrayList<User> users = new ArrayList<User>();
+    private ArrayList<User> users = new ArrayList<User>();
 
     // constructor(s)
 
@@ -33,6 +33,7 @@ public class Event {
         this.eventDate = eventDate;
         this.eventCategory = eventCategory;
         this.eventStatus = eventStatus;
+        this.users = new ArrayList<>();
     }
 
     // getter | setter
