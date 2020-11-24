@@ -1,16 +1,22 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class User {
+
 
     private  int user_ID;
     private String userFirstname;
     private String userLastname;
     private String userEmail;
     private static int counter = 1;
+    HashMap<Integer,User> allUsers = new HashMap<>();
 
     public User(String userFirstname,String userLastname,String userEmail){
         this.user_ID = counter++;
         this.userFirstname = userFirstname;
         this.userLastname = userLastname;
         this.userEmail = userEmail;
+
     }
 
     public int getUser_ID() {
