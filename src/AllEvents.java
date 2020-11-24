@@ -2,9 +2,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import java.util.ArrayList;
+
 public class AllEvents {
 
-    // If you create a new Event object -> automaticly put it inside
+    // If you create a new Event object -> automatically put it inside
     // create an arraylist with Events(objects) inside
     // allEvents
 
