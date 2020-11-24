@@ -9,7 +9,6 @@ public class User {
     private String userLastname;
     private String userEmail;
     private static int counter = 1;
-    HashMap<Integer,User> allUsers = new HashMap<>();
 
     public User(String userFirstname,String userLastname,String userEmail){
         this.user_ID = counter++;

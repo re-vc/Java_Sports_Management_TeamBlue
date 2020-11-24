@@ -201,16 +201,17 @@ public class UserInterface {
             switch (choice) {
                 case 1: {
                     //new GenerateData();
-
-                    //method call is missing
-                    System.out.println("You choosed option 1!");
+                    AllUsers allUsers = new AllUsers();
+                    allUsers.Display_AllUsers();
                     newChoice=2;
                     exit = true;
                     break;
                 }
                 case 2: {
-                    //method call is missing
-                    System.out.println("You choosed option 2!");
+                    AllUsers allUsers = new AllUsers();
+                    allUsers.CreateNewUser();
+                    System.out.println("Userslist after creating new User");
+                    allUsers.Display_AllUsers();
                     newChoice=2;
                     exit = true;
                     break;

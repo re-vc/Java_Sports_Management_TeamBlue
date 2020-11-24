@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class AllUsers  {
-    HashMap<Integer,User> userHashMap = new HashMap<>(); //creating new hashmap as property
+    private HashMap<Integer,User> userHashMap = new HashMap<>(); //creating new hashmap as property
 
     public AllUsers() {
         this.userHashMap = createUsers();  //Method to add new user to the Hashmap Method
@@ -60,7 +60,11 @@ public class AllUsers  {
         userHashMap.put(user.getUser_ID(), user);
     }
 
+    public HashMap<Integer, User> getUserHashMap() {
+        return userHashMap;
+    }
 
-
-
+    public void setUserHashMap(HashMap<Integer, User> userHashMap) {
+        this.userHashMap = userHashMap;
+    }
 }
