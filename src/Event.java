@@ -15,8 +15,6 @@ public class Event {
     private String numberOfPlayers;
     private LocalDate eventDate;
 
-
-
     //enums
     private Category eventCategory;
     private Status eventStatus;
@@ -24,7 +22,11 @@ public class Event {
     private static int counter = 1;
 
     private ArrayList<User> users;
-    ArrayList<Event> allEvents;
+    public static ArrayList<Event> allEvents = new ArrayList<Event>();
+
+    public static ArrayList<Event> EventList() {
+        return allEvents;
+    }
 
 
     // constructor(s)
@@ -42,22 +44,9 @@ public class Event {
         this.users = new ArrayList<>();
     }
 
-    public Event(){
-            }
-/*
-    public Event(int maxUsers, double ticketPrice, double pricePool, String eventName, String numberOfPlayers, LocalDate eventDate, Category eventCategory, Status eventStatus) {
-        this.maxUsers = maxUsers;
-        this.ticketPrice = ticketPrice;
-        this.pricePool = pricePool;
-        this.eventName = eventName;
-        this.numberOfPlayers = numberOfPlayers;
-        this.eventDate = eventDate;
-        this.eventCategory = eventCategory;
-        this.eventStatus = eventStatus;
-    }
-    */
+    public Event(){}
 
-    public static void createEvent(){
+    public static Event createEvent(){
         System.out.println("type max Users");
         Scanner in = new Scanner(System.in);
         int maxUsers = in.nextInt();
@@ -118,14 +107,10 @@ public class Event {
                 break;
         }
 
-        ArrayList<Event> allEvents = new ArrayList<>();
-        Event event1 = new Event(maxUsers, ticketPrice, pricePool, eventName, numberOfPlayers, newDate, category, status);
+        Event event = new Event(maxUsers, ticketPrice, pricePool, eventName, numberOfPlayers, newDate, category, status);
 
-        allEvents.add(event1);
-        System.out.println(allEvents);
-
-
-
+        allEvents.add(event);
+        return event;
     }
 
     // getter | setter
