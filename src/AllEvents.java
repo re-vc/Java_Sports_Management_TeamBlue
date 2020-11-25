@@ -13,6 +13,7 @@ public class AllEvents {
     // create new Event()
 
 
+
     public static void main(String[] args) {
 
             Event e1= new Event(10000,99.00,1.00,"Event1",

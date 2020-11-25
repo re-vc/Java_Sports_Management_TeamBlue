@@ -15,6 +15,7 @@ public class Event {
     private String numberOfPlayers;
     private LocalDate eventDate;
 
+
     //enums
     private Category eventCategory;
     private Status eventStatus;
