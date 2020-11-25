@@ -1,19 +1,22 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Event {
 
+   ;
     private int eventID;
     private int eventRating;
-    private int numberOfViewers;
+    private  static int numberOfViewers;
     private int maxUsers;
     private double ticketPrice;
     private double pricePool;
     private String eventName;
     private String numberOfPlayers;
     private LocalDate eventDate;
+    private HashMap<Integer,User> userHashMap = new HashMap<>();
 
 
     //enums
@@ -200,7 +203,7 @@ public class Event {
         return eventRating;
     }
 
-    public  int getNumberOfViewers() {
+    public static int getNumberOfViewers() {
         return numberOfViewers;
     }
 
@@ -294,6 +297,18 @@ public class Event {
         for(int i=0;i<allEvents.size();i++){
             if(allEvents.get(i).getEventStatus()==Status.CANCELLED){
                 System.out.println(allEvents.get(i));
+            }
+        }
+    }
+    public void addUsertoEvent(User user) {
+        for (int i = 0; i < allEvents.size(); i++) {
+            if (allEvents.contains(this) && allEvents.get(i).getNumberOfViewers() <= allEvents.get(i).getMaxUsers()) {
+                int Old_viewers = Event.getNumberOfViewers();
+                Old_viewers = Old_viewers + 1;
+                System.out.println("User " + user.getUserFirstname() + "has been added to the Event");
+                System.out.println("Event Number of viewers " + Old_viewers);
+            } else {
+                System.err.println("Sorry! Event is already Booked!");
             }
         }
     }

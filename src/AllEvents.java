@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 import java.util.ArrayList;
@@ -12,7 +13,15 @@ public class AllEvents {
 
     // create new Event()
 
+    private HashMap<Integer,User> userHashMap = new HashMap<>();
 
+    public static ArrayList<Event> createEvents() {
+        Event e1= new Event(10000,99.00,1.00,"Event1",
+                "2",LocalDate.of(2021,02,22),Category.BASKETBALL,Status.UPCOMING, 800);
+        ArrayList<Event> events = new ArrayList<>();
+        events.add(e1);
+        return events;
+    }
 
     public static void main(String[] args) {
 
@@ -30,6 +39,7 @@ public class AllEvents {
                     LocalDate.of(2021,06,01),Category.SWIMMING,Status.CANCELLED, 300));
 
         ArrayList<Event> allEvents = Event.EventList();
+        User user = new User("kiri","lion","@gmail.com");
 
         //Event.createEvent();
 
@@ -38,11 +48,12 @@ public class AllEvents {
         //System.out.println(allEvents);
         //Event.displayUpcomingEvents();
         //Event.displayCancelledEvents();
+        e1.addUsertoEvent(user);
         //Event.DisplayPricePoolEvent();
         //Event.DisplayAllEvents();
         //Event.DisplayPricePoolEvent();
 
-        Event.DisplayAllEvents();
+        //Event.DisplayAllEvents();
         //Event.editEventDateStatus();
 
 
