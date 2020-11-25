@@ -34,10 +34,12 @@ public class AllEvents {
 
 
 
-        System.out.println(allEvents);
-        Event.displayUpcomingEvents();
-        Event.displayCancelledEvents();
-
+        //System.out.println(allEvents);
+        //Event.displayUpcomingEvents();
+        //Event.displayCancelledEvents();
+        //Event.DisplayPricePoolEvent();
+        Event.DisplayAllEvents();
+        Event.DisplayPricePoolEvent();
 
 
 

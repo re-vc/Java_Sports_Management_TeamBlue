@@ -113,6 +113,23 @@ public class Event {
         return event;
     }
 
+    public static void DisplayAllEvents(){
+        for (int i = 0; i < allEvents.size(); i++){
+            System.out.println(allEvents.get(i).getEventName() + " | " + allEvents.get(i).getEventCategory() + " | " +  allEvents.get(i).getEventDate() + " | Ticket price: € " +  allEvents.get(i).getTicketPrice() + ",- | " + allEvents.get(i).getNumberOfPlayers() + " players | " + allEvents.get(i).getEventStatus());
+        }
+    }
+
+    public static void DisplayPricePoolEvent(){
+        System.out.println("type Event Name to display price pool");
+        Scanner in = new Scanner(System.in);
+        String eventName1 = in.nextLine();
+        for (int i = 0; i < allEvents.size(); i++){
+            if (eventName1.toUpperCase().equals(allEvents.get(i).eventName.toUpperCase())) {
+                System.out.println(allEvents.get(i).eventName + " prize pool is € " + allEvents.get(i).pricePool + ",-");
+            }
+        }
+    }
+
     // getter | setter
 
     public int getMaxUsers() {
