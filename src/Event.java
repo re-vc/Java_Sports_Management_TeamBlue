@@ -31,7 +31,7 @@ public class Event {
 
     // constructor(s)
 
-    public Event(int maxUsers, double ticketPrice, double pricePool, String eventName, String numberOfPlayers, LocalDate eventDate, Category eventCategory, Status eventStatus) {
+    public Event(int maxUsers, double ticketPrice, double pricePool, String eventName, String numberOfPlayers, LocalDate eventDate, Category eventCategory, Status eventStatus, int numberOfViewers) {
         this.eventID = counter++;
         this.maxUsers = maxUsers;
         this.ticketPrice = ticketPrice;
@@ -41,12 +41,15 @@ public class Event {
         this.eventDate = eventDate;
         this.eventCategory = eventCategory;
         this.eventStatus = eventStatus;
+        this.numberOfViewers = numberOfViewers;
         this.users = new ArrayList<>();
     }
 
     public Event(){}
 
     public static Event createEvent(){
+        int numberOfViewers = 0;
+
         System.out.println("type max Users");
         Scanner in = new Scanner(System.in);
         int maxUsers = in.nextInt();
@@ -107,7 +110,7 @@ public class Event {
                 break;
         }
 
-        Event event = new Event(maxUsers, ticketPrice, pricePool, eventName, numberOfPlayers, newDate, category, status);
+        Event event = new Event(maxUsers, ticketPrice, pricePool, eventName, numberOfPlayers, newDate, category, status, numberOfViewers);
 
         allEvents.add(event);
         return event;
