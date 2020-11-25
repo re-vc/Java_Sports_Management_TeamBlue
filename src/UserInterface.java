@@ -179,14 +179,17 @@ public class UserInterface {
         while (!exit) {
             switch (choice) {
                 case 1: {
-                    //new GenerateData();
-                    System.out.println("You choose option 1!");
+                    AllUsers allUsers = new AllUsers();
+                    allUsers.Display_AllUsers();
                     newChoice=2;
                     exit = true;
                     break;
                 }
                 case 2: {
-                    System.out.println("You choose option 2!");
+                    AllUsers allUsers = new AllUsers();
+                    allUsers.CreateNewUser();
+                    System.out.println("Userslist after creating new User");
+                    allUsers.Display_AllUsers();
                     newChoice=2;
                     exit = true;
                     break;

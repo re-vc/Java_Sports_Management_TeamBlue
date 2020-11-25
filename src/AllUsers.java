@@ -1,3 +1,4 @@
+import java.lang.invoke.StringConcatException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -44,21 +45,22 @@ public class AllUsers  {
         }
     }
 
-    public void CreateNewUser(){
+    public void CreateNewUser() {
+
         Scanner user_input = new Scanner(System.in);
         String userFirstname;
         System.out.println("Enter User First Name: ");
-        userFirstname= user_input.next();
+        userFirstname = user_input.next();
         String userLast_Name;
         System.out.println("Enter User Last Name: ");
-        userLast_Name=user_input.next();
+        userLast_Name = user_input.next();
         String email;
         System.out.println("Enter User Email: ");
         email = user_input.next();
-        User user = new User(userFirstname,userLast_Name,email);
-        System.out.println("New User " +userFirstname +" " +userLast_Name +" has been created sucessfully!");
-        userHashMap.put(user.getUser_ID(), user);
-    }
+            User user = new User(userFirstname, userLast_Name, email);
+            System.out.println("New User " + userFirstname + " " + userLast_Name + " has been created sucessfully!");
+            userHashMap.put(user.getUser_ID(), user);
+            }
 
     public HashMap<Integer, User> getUserHashMap() {
         return userHashMap;
