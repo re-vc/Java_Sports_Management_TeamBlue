@@ -30,16 +30,22 @@ public class AllEvents {
 
         ArrayList<Event> allEvents = Event.EventList();
 
-        //Event.createEvent();
+        Event.createEvent();
 
 
 
-        System.out.println(allEvents);
-        Event.displayUpcomingEvents();
-        Event.displayCancelledEvents();
+        //System.out.println(allEvents);
+        //Event.displayUpcomingEvents();
+        //Event.displayCancelledEvents();
+        //Event.DisplayPricePoolEvent();
+        //Event.DisplayAllEvents();
+        //Event.DisplayPricePoolEvent();
+        /*
+        Event.DisplayAllEvents();
+        Event.editEventDateStatus();
+        Event.DisplayAllEvents();
 
-
-
+         */
 
     }
 
