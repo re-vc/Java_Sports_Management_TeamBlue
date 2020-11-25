@@ -4,11 +4,12 @@ public class TestMain {
        AllUsers allUsers = new AllUsers();
 
 
-       allUsers.Display_AllUsers();
+       /*allUsers.Display_AllUsers();
 
        allUsers.CreateNewUser();
 
-       allUsers.Display_AllUsers();
+       allUsers.Display_AllUsers();*/
+       allUsers.addUsertoEventMenu();
 
 
 

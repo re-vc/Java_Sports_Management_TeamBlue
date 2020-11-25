@@ -143,7 +143,7 @@ public class Event {
         return eventRating;
     }
 
-    public int getNumberOfViewers() {
+    public  int getNumberOfViewers() {
         return numberOfViewers;
     }
 
