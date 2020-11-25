@@ -3,26 +3,7 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    public UserInterface(String init) {
-
-        switch (init){
-            case "default":
-                displayMainMenu();
-                break;
-            case "subEventL1":
-                displaySubEventL1(3);
-                break;
-            case "subEventL2":
-                displaySubEventL2(8);
-                break;
-            case "subUserL1":
-                displaySubUserL1(3);
-                break;
-            default:
-                System.out.println("I can not find the Menu: "+init);
-                break;
-        }
-    }
+    public UserInterface() {}
 
     public void printHeader() {
         System.out.println(" ---------------------------- ");
@@ -116,12 +97,11 @@ public class UserInterface {
         while (!exit) {
             switch (choice) {
                 case 1: {
-                    UserInterface subEventL1 = new UserInterface("subEventL1");
+                    //UserInterface subEventL1 = new UserInterface("subEventL1");
 
-                    //displaySubEventL1(3);
-                    //choice =-1;
-                    choice = subEventL1.getUserInput(3);
-                    newChoice=subEventL1.performActionL1(choice);
+                    displaySubEventL1(3);
+                    choice = getUserInput(3);
+                    newChoice=performActionL1(choice);
                     if (newChoice==0){
                         exit=true;
                     }
@@ -129,9 +109,10 @@ public class UserInterface {
                     break;
                 }
                 case 2: {
-                    UserInterface subUserL1 = new UserInterface("subUserL1");
-                    choice = subUserL1.getUserInput(3);
-                    choice=subUserL1.performActionU1(choice);
+                    //UserInterface subUserL1 = new UserInterface("subUserL1");
+                    displaySubUserL1(3);
+                    choice =getUserInput(3);
+                    choice=performActionU1(choice);
 
                     exit = false;
                     break;
@@ -157,33 +138,31 @@ public class UserInterface {
         while (!exit) {
             switch (choice) {
                 case 1: {
-                    //new GenerateData();
 
-                    UserInterface subEventL2 = new UserInterface("subEventL2"); //calls the submenu for Display events
+                    //UserInterface subEventL2 = new UserInterface("subEventL2"); //calls the submenu for Display events
+                    displaySubEventL2(8);
+                    choice = getUserInput(8);
+                    choice=performActionL2(choice);
 
-                    choice = subEventL2.getUserInput(8);
-                    choice=subEventL2.performActionL2(choice);
-                    //System.out.println("You choosed option 1!");
                     newChoice =1;
                     exit = false;
                     break;
                 }
                 case 2: {
                     // method call for create event
-                    System.out.println("You choosed option 2!");
+                    System.out.println("You choose option 2!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 3: {
                     // method call for set event status
-                    System.out.println("You choosed option 3!");
+                    System.out.println("You choose option 3!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 0: {
-                    //System.out.println("Thanks for running the Application!");
                     newChoice=0;
                     exit = true;
                     break;
@@ -201,24 +180,20 @@ public class UserInterface {
             switch (choice) {
                 case 1: {
                     //new GenerateData();
-                    AllUsers allUsers = new AllUsers();
-                    allUsers.Display_AllUsers();
+                    System.out.println("You choose option 1!");
                     newChoice=2;
                     exit = true;
                     break;
                 }
                 case 2: {
-                    AllUsers allUsers = new AllUsers();
-                    allUsers.CreateNewUser();
-                    System.out.println("Userslist after creating new User");
-                    allUsers.Display_AllUsers();
+                    System.out.println("You choose option 2!");
                     newChoice=2;
                     exit = true;
                     break;
                 }
                 case 3: {
                     //method call is missing
-                    System.out.println("You choosed option 3!");
+                    System.out.println("You choose option 3!");
                     newChoice=2;
                     exit = true;
                     break;
@@ -244,44 +219,44 @@ public class UserInterface {
         while (!exit) {
             switch (choice) {
                 case 1: {
-                    //new GenerateData();
+
                     //method call for display all events
-                    System.out.println("You choosed option 1!");
+                    System.out.println("You choose option 1!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 2: {
                     // method call for display top 5 event category
-                    System.out.println("You choosed option 2!");
+                    System.out.println("You choose option 2!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 3: {
                     // method call for display all booked out events
-                    System.out.println("You choosed option 3!");
+                    System.out.println("You choose option 3!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 4: {
                     // method call for display all events with opened spots
-                    System.out.println("You choosed option 4!");
+                    System.out.println("You choose option 4!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 5: {
                     // method call for display upcoming events
-                    System.out.println("You choosed option 5!");
+                    System.out.println("You choose option 5!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 6: {
                     // method call for display cancelled events
-                    System.out.println("You choosed option 6!");
+                    System.out.println("You choose option 6!");
                     newChoice=1;
                     exit = true;
                     break;
@@ -289,14 +264,14 @@ public class UserInterface {
 
                 case 7: {
                     // event price pool
-                    System.out.println("You choosed option 7!");
+                    System.out.println("You choose option 7!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 8: {
                     // event price pool
-                    System.out.println("You choosed option 8!");
+                    System.out.println("You choose option 8!");
                     newChoice=1;
                     exit = true;
                     break;
