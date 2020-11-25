@@ -69,4 +69,46 @@ public class AllUsers  {
     public void setUserHashMap(HashMap<Integer, User> userHashMap) {
         this.userHashMap = userHashMap;
     }
+
+    public void addUsertoEvent(User user){
+        //int Old_viewers = Event.
+    }
+    public boolean addUsertoEventMenu() {
+        int n=0;
+        do {
+            try {
+
+                int user;
+                System.out.println("Choose User to add to the Event");
+                System.out.println("1) " + this.userHashMap.get(1));
+                System.out.println("2) " + this.userHashMap.get(2));
+                System.out.println("3) " + this.userHashMap.get(3));
+                System.out.println("4) " + this.userHashMap.get(4));
+                System.out.println("5) " + this.userHashMap.get(5));
+                System.out.println("6) " + this.userHashMap.get(6));
+                System.out.println("7) " + this.userHashMap.get(7));
+                System.out.println("8) " + this.userHashMap.get(8));
+                System.out.println("9) " + this.userHashMap.get(9));
+                System.out.println("10) " + this.userHashMap.get(10));
+
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Please make selection from 1 to 10 users");
+                int choice= sc.nextInt();
+
+                switch (choice) {
+                    case 1:
+
+                        System.out.println("Here will be adding method which add the user to event");
+                        break;
+
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }while (n==0);
+        return true;
+    }
+
 }
+
