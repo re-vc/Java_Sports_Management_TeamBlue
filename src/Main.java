@@ -4,15 +4,17 @@ public class Main {
 
         // createTestDataUsers()
         // createTestDataEvents()
+        UserInterface menu = new UserInterface();
 
         int choice = -1;
         while (choice != 0) {
 
-            UserInterface menu = new UserInterface("default");
+            menu.displayMainMenu();
             choice =0;
             choice = menu.getUserInput(2);
             menu.performAction(choice);
         }
+        System.out.println("Thank you for running the application!");
 
     }
 
