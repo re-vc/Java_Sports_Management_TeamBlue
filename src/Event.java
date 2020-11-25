@@ -9,7 +9,7 @@ public class Event {
    ;
     private int eventID;
     private int eventRating;
-    private  static int numberOfViewers;
+     private static int numberOfViewers;
     private int maxUsers;
     private double ticketPrice;
     private double pricePool;
@@ -301,15 +301,23 @@ public class Event {
         }
     }
     public void addUsertoEvent(User user) {
-        for (int i = 0; i < allEvents.size(); i++) {
-            if (allEvents.contains(this) && allEvents.get(i).getNumberOfViewers() <= allEvents.get(i).getMaxUsers()) {
-                int Old_viewers = Event.getNumberOfViewers();
-                Old_viewers = Old_viewers + 1;
-                System.out.println("User " + user.getUserFirstname() + "has been added to the Event");
-                System.out.println("Event Number of viewers " + Old_viewers);
-            } else {
-                System.err.println("Sorry! Event is already Booked!");
-            }
+        System.out.println("Please Write the Event You want to add");
+
+                 for (int i = 0; i < allEvents.size(); i++) {
+                if (allEvents.contains(this) && allEvents.get(i).getNumberOfViewers() <= allEvents.get(i).getMaxUsers()) {
+                    int Old_viewers = Event.getNumberOfViewers();
+                    //Old_viewers = Old_viewers + 1;
+                    setNumberOfViewers(Old_viewers+1);
+                    userHashMap.put(user.getUser_ID(), user); //add user to the Event
+                    System.out.println("Viewers list after adding user" +userHashMap);
+                    System.out.println(allEvents);
+                    System.out.println("User " + user.getUserFirstname() + "has been added to the Event" + allEvents.get(i).getEventName());
+                    System.out.println("Event Number of viewers " + getNumberOfViewers());
+                }
+                /*
+             else {
+                System.err.println("Sorry! Event is Booked!");
+            }*/
         }
     }
 

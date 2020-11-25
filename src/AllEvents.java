@@ -40,6 +40,7 @@ public class AllEvents {
 
         ArrayList<Event> allEvents = Event.EventList();
         User user = new User("kiri","lion","@gmail.com");
+        User user1 = new User("kiri2","lion2","2@gmail.com");
 
         //Event.createEvent();
 
@@ -49,6 +50,8 @@ public class AllEvents {
         //Event.displayUpcomingEvents();
         //Event.displayCancelledEvents();
         e1.addUsertoEvent(user);
+        //e1.addUsertoEvent(user1);
+
         //Event.DisplayPricePoolEvent();
         //Event.DisplayAllEvents();
         //Event.DisplayPricePoolEvent();

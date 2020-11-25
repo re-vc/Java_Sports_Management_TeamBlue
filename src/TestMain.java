@@ -9,6 +9,7 @@ public class TestMain {
         Event e1= new Event(10000,99.00,1.00,"Event1",
                 "2", LocalDate.of(2021,02,22),Category.BASKETBALL,Status.UPCOMING, 10000);
        User user = new User("sari","laiki" ,"@gmail.com");
+       User use1 = new User("sari2","laiki2" ,"2@gmail.com");
 
 
        /*allUsers.Display_AllUsers();
@@ -17,7 +18,8 @@ public class TestMain {
 
        allUsers.Display_AllUsers();
        allUsers.addUsertoEventMenu();*/
-        e1.addUsertoEvent(user);
+        //e1.addUsertoEvent(user);
+        e1.addUsertoEvent(use1);
 
 
 
