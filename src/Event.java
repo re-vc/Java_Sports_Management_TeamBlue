@@ -207,8 +207,38 @@ public class Event {
         this.eventStatus = eventStatus;
     }
 
-    // method(s)
+        public void setUsers(ArrayList<User> users) {
+        this.users = users;
+    }
 
+    public static ArrayList<Event> getAllEvents() {
+        return allEvents;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
+    public static void setAllEvents(ArrayList<Event> allEvents) {
+        Event.allEvents = allEvents;
+    }
+    public static void displayUpcomingEvents(){
+        System.out.println("All Upcoming Events");
+        for(int i=0;i<allEvents.size();i++){
+            if (allEvents.get(i).getEventStatus()==Status.UPCOMING){
+                System.out.println(allEvents.get(i));
+            }
+        }
+
+    }
+    public static void displayCancelledEvents(){
+        System.out.println("All Cancelled Events");
+        for(int i=0;i<allEvents.size();i++){
+            if(allEvents.get(i).getEventStatus()==Status.CANCELLED){
+                System.out.println(allEvents.get(i));
+            }
+        }
+    }
 
     @Override
     public String toString() {
