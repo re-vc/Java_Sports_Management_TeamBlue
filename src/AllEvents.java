@@ -25,7 +25,7 @@ public class AllEvents {
 
     public static void main(String[] args) {
 
-        Event e1= new Event(10000,99.00,1.00,"Event1",
+        Event e1= new Event(8000,99.00,1.00,"Event1",
                 "2",LocalDate.of(2021,02,22),Category.BASKETBALL,Status.UPCOMING, 8000);
 
         Event.allEvents.add(e1);
@@ -36,7 +36,7 @@ public class AllEvents {
         Event.allEvents.add(new Event(8800,85.00,5.00,"Event4","2vs2",
                 LocalDate.of(2021,06,11),Category.BADMINTON,Status.UPCOMING, 1));
         Event.allEvents.add(new Event(7000,77.00,2.00,"Event5","20vs20",
-                LocalDate.of(2021,06,01),Category.SWIMMING,Status.CANCELLED, 300));
+                LocalDate.of(2021,06,01),Category.SWIMMING,Status.CANCELLED, 7000));
 
         ArrayList<Event> allEvents = Event.EventList();
         User user = new User("kiri","lion","@gmail.com");
@@ -49,9 +49,8 @@ public class AllEvents {
         //System.out.println(allEvents);
         //Event.displayUpcomingEvents();
         //Event.displayCancelledEvents();
-        System.out.println(allEvents);
-        Event.addUsertoEvent(user);
-        System.out.println(allEvents);
+       // Event.addUsertoEvent(user);
+        Event.displayBookedOutEvents();
         //e1.addUsertoEvent(user1);
 
         //Event.DisplayPricePoolEvent();

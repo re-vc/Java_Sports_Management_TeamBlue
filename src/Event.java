@@ -299,6 +299,25 @@ public class Event {
             }
         }
     }
+    public static void displayAllEventsWithOpenSpots(){
+        System.out.println("All Events with open spots");
+        for(int i=0;i<allEvents.size();i++){
+            if(allEvents.get(i).getMaxUsers() > allEvents.get(i).getNumberOfViewers()){
+                int openspots = allEvents.get(i).getMaxUsers() - allEvents.get(i).getNumberOfViewers();
+                System.out.println(allEvents.get(i).getEventName() + " has " + openspots + " open spots.");
+            }
+        }
+    }
+
+    public static void displayBookedOutEvents(){
+        System.out.println("All Events booked out events");
+        for(int i=0;i<allEvents.size();i++){
+            if(allEvents.get(i).getMaxUsers() == allEvents.get(i).getNumberOfViewers()){
+                System.out.println(allEvents.get(i).getEventName());
+            }
+        }
+    }
+
     public static void addUsertoEvent(User user) {
         System.out.println("eventname");
         Scanner in = new Scanner(System.in);
