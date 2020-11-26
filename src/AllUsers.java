@@ -1,4 +1,3 @@
-import java.lang.invoke.StringConcatException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +14,6 @@ public class AllUsers  {
     public AllUsers() {
         this.userHashMap = createUsers();  //Method to add new user to the Hashmap Method
     }
-
 
     public HashMap<Integer, User> createUsers() {
         User user1 = new User("Robert","Smith","Robert@gmail.com");

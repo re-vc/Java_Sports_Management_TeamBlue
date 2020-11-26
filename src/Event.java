@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class Event {
 
-   ;
+    ;
     private int eventID;
     private int eventRating;
-     private static int numberOfViewers;
+    private int numberOfViewers;
     private int maxUsers;
     private double ticketPrice;
     private double pricePool;
@@ -17,7 +17,6 @@ public class Event {
     private String numberOfPlayers;
     private LocalDate eventDate;
     private HashMap<Integer,User> userHashMap = new HashMap<>();
-
 
     //enums
     private Category eventCategory;
@@ -203,7 +202,7 @@ public class Event {
         return eventRating;
     }
 
-    public static int getNumberOfViewers() {
+    public int getNumberOfViewers() {
         return numberOfViewers;
     }
 
@@ -267,7 +266,7 @@ public class Event {
         this.eventStatus = eventStatus;
     }
 
-        public void setUsers(ArrayList<User> users) {
+    public void setUsers(ArrayList<User> users) {
         this.users = users;
     }
 
@@ -300,24 +299,22 @@ public class Event {
             }
         }
     }
-    public void addUsertoEvent(User user) {
-        System.out.println("Please Write the Event You want to add");
+    public static void addUsertoEvent(User user) {
+        System.out.println("eventname");
+        Scanner in = new Scanner(System.in);
+        String eventName1 = in.nextLine();
+        HashMap<Integer, User> userHashMap = new HashMap<>();
 
-                 for (int i = 0; i < allEvents.size(); i++) {
-                if (allEvents.contains(this) && allEvents.get(i).getNumberOfViewers() <= allEvents.get(i).getMaxUsers()) {
-                    int Old_viewers = Event.getNumberOfViewers();
-                    //Old_viewers = Old_viewers + 1;
-                    setNumberOfViewers(Old_viewers+1);
-                    userHashMap.put(user.getUser_ID(), user); //add user to the Event
-                    System.out.println("Viewers list after adding user" +userHashMap);
-                    System.out.println(allEvents);
-                    System.out.println("User " + user.getUserFirstname() + "has been added to the Event" + allEvents.get(i).getEventName());
-                    System.out.println("Event Number of viewers " + getNumberOfViewers());
-                }
-                /*
-             else {
-                System.err.println("Sorry! Event is Booked!");
-            }*/
+        for (int i = 0; i < allEvents.size(); i++) {
+            if (allEvents.get(i).getEventName().contains(eventName1) && allEvents.get(i).getNumberOfViewers() <= allEvents.get(i).getMaxUsers()) {
+                int Old_viewers = allEvents.get(i).getNumberOfViewers();
+                Old_viewers = Old_viewers + 1;
+                allEvents.get(i).setNumberOfViewers(Old_viewers);
+                userHashMap.put(user.getUser_ID(), user); //add user to the Event
+                System.out.println("Viewers list after adding user" +userHashMap);
+                System.out.println("User " + user.getUserLastname() + "has been added to " + allEvents.get(i).getEventName());
+                System.out.println("Event Number of viewers " + Old_viewers);
+            }
         }
     }
 
